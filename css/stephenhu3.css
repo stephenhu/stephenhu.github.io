@@ -1,0 +1,117 @@
+/* stephenhu3.css */
+
+html, body {
+  font-family: Arial;
+  height: 100%;
+  background-image: url("https://ocean.si.edu/sites/default/files/styles/article_main_image/public/2020-08/ocean-wave-11491741920.jpg?itok=wDxwNTHi");
+  background-color: #005994;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+}
+
+a, a:visited, a:hover, a:link {
+  text-decoration: none;
+  font-weight: 300;
+}
+
+/* custom classes */
+
+.box {
+  float: left;
+  padding: 20px;
+  margin: 1px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-style: outset;
+  border: 1px outset #0059ae;
+  opacity: .8;
+  max-width: 602px;
+}
+
+.box:hover {
+  opacity: 1;
+}
+
+.xl {
+  height: auto;
+  width: 100%;
+  overflow: visible;
+}
+
+.l {
+  height: 300px;
+  width: 602px;
+}
+
+.m {
+  height: 300px;
+  width: 300px;
+}
+
+.s {
+  height: 150px;
+  width: 300px;
+}
+
+.xs {
+  height: 200px;
+  width: 300px;
+}
+
+/* bootstrap overrides */
+
+/* colors */
+
+.green {
+  color: #ffffff;
+  background: -webkit-linear-gradient( top, #008822, #00c700 );
+  background: -moz-linear-gradient( top, #008822, #00c700 );
+}
+
+.green a {
+  color: #ffffff;
+}
+
+.green a:hover {
+  color: #000000;
+  font-weight: 500;
+}
+
+.blue {
+  color: #ffffff;
+  background: -webkit-linear-gradient( top, #005994, #007dd1 );
+  background: -moz-linear-gradient( top, #005994, #007dd1 );
+}
+
+.blue a {
+  color: #ffffff;
+}
+ 
+.blue a:hover {
+  color: #0096fa;
+  font-weight: 500;
+}
+
+.purple {
+  color: #ffffff;
+  background: -webkit-linear-gradient( top, #560bad, #3a0ca3 );
+  background: -moz-linear-gradient( top, #560bad, #3a0ca3 );
+}
+
+.red {
+  color: #ffffff;
+  background: -webkit-linear-gradient( top, #d00000, #6a040f );
+  background: -moz-linear-gradient( top, #d00000, #6a040f );
+}
+
+.slate {
+  color: #ffffff;
+  background: -webkit-linear-gradient( top, #222222, #000000 );
+  background: -moz-linear-gradient( top, #222222, #000000 );
+}
