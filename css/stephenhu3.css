@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 a, a:visited, a:hover, a:link {
   text-decoration: none;
   font-weight: 300;
+  color: #ffffff;
 }
 
 /* custom classes */
@@ -90,13 +91,10 @@ a, a:visited, a:hover, a:link {
 }
 
 .blue a {
-  color: #ffffff;
+  color: #00c700;
 }
  
-.blue a:hover {
-  color: #0096fa;
-  font-weight: 500;
-}
+
 
 .purple {
   color: #ffffff;
