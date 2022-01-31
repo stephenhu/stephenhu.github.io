@@ -20,6 +20,13 @@ a, a:visited, a:hover, a:link {
   color: #ffffff;
 }
 
+img {
+  max-width: 600px;
+  float: left;
+  margin-right: 20px;
+  opacity: 1;
+}
+
 /* custom classes */
 
 .box {
@@ -32,7 +39,7 @@ a, a:visited, a:hover, a:link {
   border-style: outset;
   border: 1px outset #0059ae;
   opacity: .8;
-  max-width: 602px;
+  /* max-width: 602px; */
 }
 
 .box:hover {
@@ -93,8 +100,6 @@ a, a:visited, a:hover, a:link {
 .blue a {
   color: #00c700;
 }
- 
-
 
 .purple {
   color: #ffffff;
@@ -106,6 +111,12 @@ a, a:visited, a:hover, a:link {
   color: #ffffff;
   background: -webkit-linear-gradient( top, #d00000, #6a040f );
   background: -moz-linear-gradient( top, #d00000, #6a040f );
+}
+
+.white {
+  color: #000000;
+  background: -webkit-linear-gradient( top, #eeeeee, #ffffff );
+  background: -moz-linear-gradient( top, #eeeeee, #ffffff );
 }
 
 .slate {

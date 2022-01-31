@@ -3,7 +3,9 @@
 const EMPTY         = "";
 const FSLASH        = "/";
 const MAIN_ID       = "main";
+const MAIN_MENU_ID  = "main-menu";
 const PAGE_ID       = "page";
+const PAGE_MENU_ID  = "page-menu";
 
 const TAG_CLASS     = "class";
 const TAG_ID        = "id";
@@ -27,9 +29,12 @@ function toggleView(a, b) {
   var show = document.getElementById(a);
   var hide = document.getElementById(b);
 
-  show.setAttribute(TAG_CLASS, DBLOCK);
-  hide.setAttribute(TAG_CLASS, DNONE);
-
+  show.classList.remove(DNONE);
+  show.classList.add(DBLOCK);
+  
+  hide.classList.remove(DBLOCK);
+  hide.classList.add(DNONE);
+  
 } // toggleView
 
 
@@ -37,22 +42,29 @@ function navigation() {
 
   var hash = new URL(document.URL).hash.substring(1);
 
-  console.log(hash);
   if(hash === EMPTY) {
+    toggleView(MAIN_MENU_ID, PAGE_MENU_ID);
     toggleView(MAIN_ID, PAGE_ID);
   } else {
+
+    toggleView(PAGE_MENU_ID, MAIN_MENU_ID);
     toggleView(PAGE_ID, MAIN_ID);
 
-    var page = document.getElementById(PAGE_ID);
+    var page      = document.getElementById(PAGE_ID);
+    var pageMenu = document.getElementById(PAGE_MENU_ID);
 
     for(var i = 0; i < page.children.length; i++) {
 
       if(page.children[i].getAttribute(TAG_ID) === hash) {
-        page.children[i].setAttribute(TAG_CLASS,
-          `${DBLOCK} ${CLASS_BOX} ${CLASS_XL} ${CLASS_BLUE}`);
+
+        page.children[i].classList.remove(DNONE);
+        page.children[i].classList.add(DBLOCK);
+
       } else {
-        page.children[i].setAttribute(TAG_CLASS,
-          `${DNONE} ${CLASS_BOX} ${CLASS_XL} ${CLASS_BLUE}`);
+
+        page.children[i].classList.remove(DBLOCK);
+        page.children[i].classList.add(DNONE);
+        
       }
 
     }
@@ -74,7 +86,7 @@ function render() {
     var hash = new URL(document.URL).hash;
 
     if(hash === EMPTY) {
-      console.log("test");
+      toggleView(MAIN_MENU_ID, PAGE_ID);
       toggleView(MAIN_ID, PAGE_ID);
     } else {
       navigation();
@@ -135,5 +147,3 @@ function since() {
   }
   
 } // since
-
-
