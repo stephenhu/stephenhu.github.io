@@ -78,7 +78,7 @@ function render() {
 
   window.onload = function () {
 
-    parseArticles();
+    //parseArticles();
 
     var main = document.getElementById(MAIN_ID);
     var page = document.getElementById(PAGE_ID);
