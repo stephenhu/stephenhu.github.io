@@ -75,7 +75,7 @@ function setTitle(h) {
     var idx = xdata.value.indexOf(DOLLAR);
 
     var creation = xdata.value.substring(0, idx);
-    var title    = xdata.value.substring(idx + 1, xdata.value.length - 1);
+    var title    = xdata.value.substring(idx + 1, xdata.value.length);
   
     var d = new Date(creation);
 
