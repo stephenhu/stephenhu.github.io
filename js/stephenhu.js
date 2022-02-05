@@ -82,7 +82,7 @@ function setTitle(h) {
     var s = d.toLocaleString("default",
       { month: "short", year: "numeric"});
 
-    titleBar.innerText = `${title}, ${s}`; 
+    titleBar.innerText = `/ ${title} / ${s}`; 
 
   }
 
